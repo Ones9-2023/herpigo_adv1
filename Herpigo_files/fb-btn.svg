@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="50px" viewBox="0 0 60 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>84974B09-BFAE-4EA6-B0B7-632568E8AA11</title>
+    <defs>
+        <filter x="-18.3%" y="-14.0%" width="136.7%" height="144.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.253078221 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Herpigo_Page_Medium" transform="translate(-250.000000, -5794.000000)">
+            <g id="FB_BTN" filter="url(#filter-1)" transform="translate(250.000000, 5794.000000)">
+                <rect id="Rectangle-Copy-22" fill="#425798" x="0" y="0" width="60" height="50" rx="21"></rect>
+                <path d="M31.9753789,40.0021745 L31.9753789,24.9982433 L36.1171201,24.9982433 L36.6659903,19.8278056 L31.9753789,19.8278056 L31.9824157,17.2399517 C31.9824157,15.8914219 32.1105441,15.1688488 34.0474223,15.1688488 L36.6366703,15.1688488 L36.6366703,9.99782554 L32.4943427,9.99782554 C27.5187411,9.99782554 25.7674584,12.5060441 25.7674584,16.724079 L25.7674584,19.8283911 L22.6659903,19.8283911 L22.6659903,24.9988289 L25.7674584,24.9988289 L25.7674584,40.0021745 L31.9753789,40.0021745 Z" id="FB" fill="#F9F9F9"></path>
+            </g>
+        </g>
+    </g>
+</svg>

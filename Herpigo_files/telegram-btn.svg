@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="50px" viewBox="0 0 60 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>1DA12435-2225-48A0-82CB-DED932E1C840</title>
+    <defs>
+        <filter x="-18.3%" y="-14.0%" width="136.7%" height="144.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.253078221 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="66.67%" y1="26.8541667%" x2="41.67%" y2="67.3611111%" id="linearGradient-2">
+            <stop stop-color="#37AEE2" offset="0%"></stop>
+            <stop stop-color="#1E96C8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="61.2346759%" y1="45.5610016%" x2="74.7064382%" y2="71.2734252%" id="linearGradient-3">
+            <stop stop-color="#EFF7FC" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Herpigo_Page_Medium" transform="translate(-490.000000, -5794.000000)">
+            <g id="telegram-btn" filter="url(#filter-1)" transform="translate(490.000000, 5794.000000)">
+                <rect id="Rectangle-Copy-23" fill="url(#linearGradient-2)" x="0" y="0" width="60" height="50" rx="21"></rect>
+                <path d="M23.2703083,36.7049367 C22.2984083,36.7049367 22.4635583,36.3379617 22.1283583,35.4125617 L19.2703083,26.0064117 L41.2703083,12.9549367" id="Shape" fill="#C8DAEA"></path>
+                <path d="M23.2703083,36.7049367 C24.0203083,36.7049367 24.3516833,36.3619367 24.7703083,35.9549367 L28.7703083,32.0654367 L23.7808083,29.0566867" id="Shape" fill="#A9C9DD"></path>
+                <path d="M23.7803083,29.0574367 L35.8703083,37.9896867 C37.2499333,38.7509117 38.2456583,38.3567867 38.5893083,36.7088117 L43.5105583,13.5180617 C44.0144083,11.4980117 42.7405333,10.5818117 41.4207083,11.1810117 L12.5232083,22.3237617 C10.5506833,23.1149367 10.5621833,24.2154117 12.1636583,24.7057617 L19.5794083,27.0203367 L36.7476583,16.1890867 C37.5581333,15.6976117 38.3019833,15.9618392 37.6914583,16.5036867" id="Shape" fill="url(#linearGradient-3)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
