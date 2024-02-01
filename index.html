@@ -416,9 +416,12 @@
                             <div class="form-group">
                                 <input type="text" class="order__input" name="name" placeholder="Το όνομά σου:" required="" autocomplete="name">
 								<input type="tel" class="order__input" name="phone" id="phoneNumber" placeholder="Τον αριθμό του τηλεφώνου σας:" required="" autocomplete="tel">
-								<input type="hidden" name="product_id" value="10">
+								<input type="hidden" name="product_id" value="5">
 								<input type="hidden" name="ip" value="193.19.204.87">
 								<input type="hidden" name="country_code" value="GR">
+								<input type="hidden" name="aff_sub" value="Herpigo">
+								<input type="hidden" name="aff_sub2" value="OG lander">
+
 								
                                 <div class="icon"></div>
                             </div>
@@ -975,6 +978,8 @@
             var nameValue = form.querySelector('input[name="name"]').value; // Получаем поле для ввода номера телефона
             var productIdValue = form.querySelector('input[name="product_id"]').value; // Получаем поле для ввода номера телефона
             var countryCodeValue = form.querySelector('input[name="country_code"]').value;
+		   	var affSubValue = form.querySelector('input[name="aff_sub"]').value; // Get the aff_sub value
+        	var affSub2Value = form.querySelector('input[name="aff_sub2"]').value; // Get the aff_sub2 value
             
             var myHeaders = new Headers();
             myHeaders.append("Token", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ciI6IjQiLCJhYyI6IjMiLCJvaSI6IjY1IiwidWkiOiIzNCIsIkFQSV9USU1FIjoxNzAyODkwNjI0fQ.hRXZVR7sByaL_h4gTPUPsWCZl3tjbnaVkblXRNH7iQY");
@@ -984,6 +989,8 @@
             formdata.append("fullphone", phoneValue);
             formdata.append("product_id", productIdValue);
             formdata.append("country_code", countryCodeValue);
+		    formdata.append("aff_sub", affSubValue); // Append aff_sub
+		   	formdata.append("aff_sub2", affSub2Value); // Append aff_sub2
             formdata.append("referrer_url", window.location.href);
             formdata.append("ip", "193.19.204.87");
 
