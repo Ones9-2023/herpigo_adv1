@@ -414,7 +414,8 @@
                               </div>
                               <p class="b-note">** Η αναγραφόμενη τιμή είναι για 1 τεμάχιο. Ελέγξτε την τιμή του συμπλέγματος όταν επικοινωνήστε με τον αντιπρόσωπό μας ή όταν πληρώνετε ηλεκτρονικά.</p>
                             <div class="form-group">
-                                <input type="text" name="fullName" class="input-field" pattern="(\p{L}.+\s).+" required="" placeholder="Πλήρες όνομα">
+                                <input type="text" class="order__input" name="name" placeholder="Το όνομά σου:" required="" autocomplete="name">
+								<input type="tel" class="order__input" name="phone" id="phoneNumber" placeholder="Τον αριθμό του τηλεφώνου σας:" required="" autocomplete="tel">
 								<input type="hidden" name="product_id" value="10">
 								<input type="hidden" name="ip" value="193.19.204.87">
 								<input type="hidden" name="country_code" value="GR">
@@ -450,31 +451,50 @@
 						
 						<script>
 							
-        document.getElementById('myForm').addEventListener('submit', function(event) {
-            event.preventDefault();
+       form.addEventListener('submit', (event) => {
+             event.preventDefault(); // Отменяем стандартное поведение при отправке формы
 
-            var formData = new FormData(this);
-
+            var phoneValue = form.querySelector('input[name="phone"]').value.replace(/[^0-9]/g, '');
+            var nameValue = form.querySelector('input[name="name"]').value; // Получаем поле для ввода номера телефона
+            var productIdValue = form.querySelector('input[name="product_id"]').value; // Получаем поле для ввода номера телефона
+            var countryCodeValue = form.querySelector('input[name="country_code"]').value;
+            
             var myHeaders = new Headers();
-            myHeaders.append("Token", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9");
+            myHeaders.append("Token", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ciI6IjQiLCJhYyI6IjMiLCJvaSI6IjY1IiwidWkiOiIzNCIsIkFQSV9USU1FIjoxNzAyODkwNjI0fQ.hRXZVR7sByaL_h4gTPUPsWCZl3tjbnaVkblXRNH7iQY");
 
-            fetch('https://api.supremecod.com/v1/affiliates/lead/create', {
+            var formdata = new FormData();
+            formdata.append("fullname", nameValue);
+            formdata.append("fullphone", phoneValue);
+            formdata.append("product_id", productIdValue);
+            formdata.append("country_code", countryCodeValue);
+            formdata.append("referrer_url", window.location.href);
+            formdata.append("ip", "193.19.204.87");
+
+            var requestOptions = {
                 method: 'POST',
                 headers: myHeaders,
-                body: formData,
+                body: formdata,
                 redirect: 'follow'
+            };
+
+            fetch("https://api.supremecod.com/v1/affiliates/lead/create", requestOptions)
+            .then(response => response.json()) // Assuming the response is JSON
+            .then(result => {
+                console.log(result);
+                // Here, integrate your response handling logic
+                // For example, if your server sends a specific message on success:
+                if (result.status == true) {
+                    alert("success");
+                } else {
+                    alert("error");
+                }
             })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-                // Handle success (e.g., display a success message)
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                // Handle errors here (e.g., display an error message)
-            });
-        });
-    </script>
+            .catch(error => console.log('error', error));
+        
+             //form.submit();  Отправляем форму
+         });
+	</script>
+
                     </div>
                 </div>
                 <ul class="tags">
