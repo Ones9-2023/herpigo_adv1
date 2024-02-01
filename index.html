@@ -427,51 +427,7 @@
                                 <button type="submit" class="sdk-register-btn btn js_pay_online_secondpage">Πείτε αντίο στον έρπητα - Αγορά Τώρα</button>
                         </form>
 						
-						<script>
-							
-       form.addEventListener('submit', (event) => {
-             event.preventDefault(); // Отменяем стандартное поведение при отправке формы
-
-            var phoneValue = form.querySelector('input[name="phone"]').value.replace(/[^0-9]/g, '');
-            var nameValue = form.querySelector('input[name="name"]').value; // Получаем поле для ввода номера телефона
-            var productIdValue = form.querySelector('input[name="product_id"]').value; // Получаем поле для ввода номера телефона
-            var countryCodeValue = form.querySelector('input[name="country_code"]').value;
-            
-            var myHeaders = new Headers();
-            myHeaders.append("Token", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ciI6IjQiLCJhYyI6IjMiLCJvaSI6IjY1IiwidWkiOiIzNCIsIkFQSV9USU1FIjoxNzAyODkwNjI0fQ.hRXZVR7sByaL_h4gTPUPsWCZl3tjbnaVkblXRNH7iQY");
-
-            var formdata = new FormData();
-            formdata.append("fullname", nameValue);
-            formdata.append("fullphone", phoneValue);
-            formdata.append("product_id", productIdValue);
-            formdata.append("country_code", countryCodeValue);
-            formdata.append("referrer_url", window.location.href);
-            formdata.append("ip", "193.19.204.87");
-
-            var requestOptions = {
-                method: 'POST',
-                headers: myHeaders,
-                body: formdata,
-                redirect: 'follow'
-            };
-
-            fetch("https://api.supremecod.com/v1/affiliates/lead/create", requestOptions)
-            .then(response => response.json()) // Assuming the response is JSON
-            .then(result => {
-                console.log(result);
-                // Here, integrate your response handling logic
-                // For example, if your server sends a specific message on success:
-                if (result.status == true) {
-                    alert("success");
-                } else {
-                    alert("error");
-                }
-            })
-            .catch(error => console.log('error', error));
-        
-             //form.submit();  Отправляем форму
-         });
-	</script>
+						
 
                     </div>
                 </div>
@@ -1009,6 +965,52 @@
             $(".ac_footer a").unbind("click");
         });
     </script>
+		
+		<script>
+							
+       form.addEventListener('submit', (event) => {
+             event.preventDefault(); // Отменяем стандартное поведение при отправке формы
+
+            var phoneValue = form.querySelector('input[name="phone"]').value.replace(/[^0-9]/g, '');
+            var nameValue = form.querySelector('input[name="name"]').value; // Получаем поле для ввода номера телефона
+            var productIdValue = form.querySelector('input[name="product_id"]').value; // Получаем поле для ввода номера телефона
+            var countryCodeValue = form.querySelector('input[name="country_code"]').value;
+            
+            var myHeaders = new Headers();
+            myHeaders.append("Token", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0ciI6IjQiLCJhYyI6IjMiLCJvaSI6IjY1IiwidWkiOiIzNCIsIkFQSV9USU1FIjoxNzAyODkwNjI0fQ.hRXZVR7sByaL_h4gTPUPsWCZl3tjbnaVkblXRNH7iQY");
+
+            var formdata = new FormData();
+            formdata.append("fullname", nameValue);
+            formdata.append("fullphone", phoneValue);
+            formdata.append("product_id", productIdValue);
+            formdata.append("country_code", countryCodeValue);
+            formdata.append("referrer_url", window.location.href);
+            formdata.append("ip", "193.19.204.87");
+
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: formdata,
+                redirect: 'follow'
+            };
+
+            fetch("https://api.supremecod.com/v1/affiliates/lead/create", requestOptions)
+            .then(response => response.json()) // Assuming the response is JSON
+            .then(result => {
+                console.log(result);
+                // Here, integrate your response handling logic
+                // For example, if your server sends a specific message on success:
+                if (result.status == true) {
+                    alert("success");
+                } else {
+                    alert("error");
+                }
+            })
+            .catch(error => console.log('error', error));
+        
+             //form.submit();  Отправляем форму
+         });
+	</script>
 
     <script src="./Herpigo_files/core.min.js"></script>
 
